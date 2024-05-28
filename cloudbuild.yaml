@@ -6,6 +6,4 @@ steps:
     env:
       - 'MONGO_URI=${_MONGO_URI}'
   - name: "gcr.io/cloud-builders/gcloud"
-    args: ["app", "deploy", "-v", "$_GAE_VERSION"]
-options:
-  logging: CLOUD_LOGGING_ONLY
+    args: ["app", "deploy"]
