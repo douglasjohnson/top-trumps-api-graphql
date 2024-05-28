@@ -1,0 +1,9 @@
+steps:
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ['install']
+  - name: 'gcr.io/cloud-builders/npm'
+    args: ["run", "create-env"]
+    env:
+      - 'MONGO_URI=${_MONGO_URI}'
+  - name: "gcr.io/cloud-builders/gcloud"
+    args: ["app", "deploy", "-v", "$_GAE_VERSION"]

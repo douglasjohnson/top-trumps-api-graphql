@@ -1,5 +1,5 @@
 {
-  "name": "graphql-apollo-mongodb",
+  "name": "top-trumps-api-graphql",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
