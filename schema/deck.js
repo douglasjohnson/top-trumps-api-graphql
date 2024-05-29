@@ -2,6 +2,10 @@ const { composeWithMongoose } = require("graphql-compose-mongoose");
 const { Deck } = require("../model/deck");
 
 const DeckTC = composeWithMongoose(Deck, {});
+DeckTC.addFields({
+    id: "MongoID",
+});
+DeckTC.removeField("_id")
 
 const DeckQuery = {
     decks: DeckTC.getResolver("findMany"),
